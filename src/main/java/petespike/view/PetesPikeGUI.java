@@ -48,14 +48,13 @@ public class PetesPikeGUI extends Application implements PetesPikeObserver {
     private HBox directionControls;
     private HBox commandControls;
 
-
-    private final Image peteImage = new Image("file:project-team_01/images/pete.png");
-    private final Image blueGoatImage = new Image("file:project-team_01/images/bluegoat.png");
-    private final Image grayGoatImage = new Image("file:project-team_01/images/graygoat.png");
-    private final Image greenGoatImage = new Image("file:project-team_01/images/greengoat.png");
-    private final Image redGoatImage = new Image("file:project-team_01/images/redgoat.png");
-    private final Image yellowGoatImage = new Image("file:project-team_01/images/yellowgoat.png");
-    private final Image mountaintopImage = new Image("file:project-team_01/images/mountain.png");
+    private final Image peteImage = new Image("file:images/pete.png");
+    private final Image blueGoatImage = new Image("file:images/bluegoat.png");
+    private final Image grayGoatImage = new Image("file:images/graygoat.png");
+    private final Image greenGoatImage = new Image("file:images/greengoat.png");
+    private final Image redGoatImage = new Image("file:images/redgoat.png");
+    private final Image yellowGoatImage = new Image("file:images/yellowgoat.png");
+    private final Image mountaintopImage = new Image("file:images/mountain.png");
     private final Image[] goatImages = {blueGoatImage, grayGoatImage, greenGoatImage, redGoatImage, yellowGoatImage};
     private final Random RNG = new Random();
 
@@ -67,7 +66,7 @@ public class PetesPikeGUI extends Application implements PetesPikeObserver {
      */
     @Override
     public void start(Stage primaryStage) throws Exception { 
-        game = new PetesPike("project-team_01/data/petes_pike_5_5_4_0.txt");
+        game = new PetesPike("data/petes_pike_5_5_4_0.txt");
         game.registerObserver(this);
 
         // Main layout
@@ -234,7 +233,7 @@ public class PetesPikeGUI extends Application implements PetesPikeObserver {
 
     private void resetGame() {
         try {
-            game = new PetesPike("project-team_01/data/petes_pike_5_5_4_0.txt");
+            game = new PetesPike("data/petes_pike_5_5_4_0.txt");
             game.registerObserver(this);
             PetesPikeSolver.clearVisitedStates();
             updateBoard();

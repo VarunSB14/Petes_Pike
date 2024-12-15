@@ -306,7 +306,7 @@ public class PetesPikeCLI {
                     */
                    //@SuppressWarnings("static-access")
         public static void main(String[] args) throws IOException, InterruptedException { 
-            String filename = "project-team_01/data/petes_pike_5_5_4_0.txt";
+            String filename = "data/petes_pike_5_5_4_0.txt";
             try {
                 PetesPike pp = new PetesPike(filename);
                 System.out.println("Puzzle Filename: " + filename);
